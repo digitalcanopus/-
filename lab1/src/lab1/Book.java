@@ -116,20 +116,19 @@ public class Book implements Comparable<Book> {
 		Comparator<Book> authortitleC = new AuthorComparator().thenComparing(new TitleComparator());
 		Comparator<Book> authortitlepriceC = new AuthorComparator().thenComparing(new TitleComparator()).thenComparing(new PriceComparator());
 		
-		ArrayList<Book> list = new ArrayList<Book>();
-        list.add(new Book("A", "B", 100, 123));
-        list.add(new Book("B", "B", 120, 124));
-        list.add(new Book("AB", "A", 50, 32));
-        list.add(new Book("C", "C", 130, 1123));
-        list.add(new Book("BAC", "C", 89, 4214));
+		ArrayList<Book> books2 = new ArrayList<Book>();
+		books2.add(new Book("Sputnik Sweetheart", "Murakami", 20, 1, 895));
+		books2.add(new Book("Fight Club", "Palahniuk", 25, 2, 263));
+		books2.add(new Book("Great Expectations", "Dickens", 30, 5, 458));
+		books2.add(new Book("Surely You’re Joking, Mr Feynman!", "Feynman", 15, 4, 322));
 
-        list.sort(titleC);
-        System.out.println(Arrays.toString(list.toArray()));
-        list.sort(titleauthorC);
-        System.out.println(Arrays.toString(list.toArray()));
-        list.sort(authortitleC);
-        System.out.println(Arrays.toString(list.toArray()));
-        list.sort(authortitlepriceC);
-        System.out.println(Arrays.toString(list.toArray()));
+		books2.sort(titleC);
+        	System.out.println(Arrays.toString(books2.toArray()));
+        	books2.sort(titleauthorC);
+        	System.out.println(Arrays.toString(books2.toArray()));
+        	books2.sort(authortitleC);
+        	System.out.println(Arrays.toString(books2.toArray()));
+        	books2.sort(authortitlepriceC);
+        	System.out.println(Arrays.toString(books2.toArray()));
 	}
 }
